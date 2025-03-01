@@ -1,0 +1,10 @@
+setuptools>=65.5.0
+wheel>=0.41.1
+Flask==2.3.2
+numpy>=1.26.0
+opencv_python==4.8.0.76
+tensorflow==2.18.0
+Werkzeug==2.3.5
+requests==2.31.0
+gdown==5.2.0
+gunicorn==23.0.0
