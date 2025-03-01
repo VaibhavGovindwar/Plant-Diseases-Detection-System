@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/Home_img.jpg')}}");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        img {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: green;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid rgb(16, 226, 16);
+            text-align: center;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+    
+        .button:hover {
+            background-color: rgb(11, 51, 11);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Plant Disease Detection System</h1>
+        <div>
+            <h3>Original Image</h3>
+            <img src="{{ image_path }}" alt="Leaf Image">
+        </div>
+        <div class="result">
+            Predicted : {{ label }}
+        </div>
+        <a href="/" class="button">Predict Another Image</a>
+
+    </div>
+</body>
+</html>

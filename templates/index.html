@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/Home_img.jpg')}}");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            margin-bottom: -50px;
+            padding-top: 220px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wel-Come to Plant Disease Detection System</h1>
+        <h3>Upload image to predict whether a leaf is healthy or diseased</h3>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Predict Leaf </button>
+        </form>
+    </div>
+</body>
+</html>
