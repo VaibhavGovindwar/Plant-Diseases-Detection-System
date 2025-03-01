@@ -1,0 +1,10 @@
+setuptools>=65.5.0
+wheel
+Flask
+numpy
+opencv_python-headless
+tensorflow>==2.18.0
+Werkzeug
+requests
+gdown
+gunicorn
